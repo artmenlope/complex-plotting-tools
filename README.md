@@ -4,16 +4,15 @@ Module for plotting complex-valued functions of complex variable using different
 ## Table of contents
 
 - [Examples gallery](#Examples-gallery)
-- [Examples 1](#Examples-1)
-- [Examples 2](#Examples-2)
+  - [Examples 1](#Examples-1)
+  - [Examples 2](#Examples-2)
 
 ## Examples gallery
 
 ### Examples 1 
 
-<p align="center">
-<img src="https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Bf(z)%20%3D%20%5Cfrac%7B(z%5E2-1)(z-2-i)%5E2%7D%7Bz%5E2%2B2%2B2i%7D%7D">
-</p>
+
+In this first set of examples the test function is <img src="https://render.githubusercontent.com/render/math?math=f(z)%20%3D%20%5Cfrac%7B(z%5E2-1)(z-2-i)%5E2%7D%7Bz%5E2%2B2%2B2i%7D">.
 
 ![](cplotting-images/domain_coloring.png) |  ![](cplotting-images/domain_coloring_cmap.png)
 | ------------- | ------------- |
@@ -26,9 +25,7 @@ Module for plotting complex-valued functions of complex variable using different
 
 ### Examples 2 
 
-<p align="center">
-<img src="https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Bf(z)%20%3D%20%5Ccos%20z%7D">
-</p>
+In this second set of examples the test function is <img src="https://render.githubusercontent.com/render/math?math=f(z)%20%3D%20%5Ccos%20z">.
 
 ![](cplotting-images/vector_cos.png)  |  ![](cplotting-images/vector_cmap_cos.png)
 | ------------- | ------------- |
