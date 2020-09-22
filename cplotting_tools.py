@@ -2,7 +2,7 @@
 """
 Created on Tue Jul  7 13:05:40 2020
 
-@author: Arturo Mena López
+@author: artmenlope
 """
 
 import numpy as np
@@ -91,7 +91,7 @@ def domain_coloring(x, y, f,
 
     # Prepare for using colormaps.
     norm = matplotlib.colors.Normalize(vmin=0,vmax=2*np.pi)
-    c_m = cmap #twilight, hsv
+    c_m = cmap # "twilight", "hsv"
     s_m = matplotlib.cm.ScalarMappable(cmap=c_m, norm=norm)
     s_m.set_array([])
     fcolors = s_m.to_rgba(arg_f)
@@ -131,8 +131,7 @@ def domain_coloring_illuminated(x, y, f,
                                 xlabel="Re", 
                                 ylabel="Im",
                                 title=None,
-                                grid=False,
-                                cmap="hsv"):
+                                grid=False):
     
     """
     Domain coloring plot. 
@@ -161,7 +160,7 @@ def domain_coloring_illuminated(x, y, f,
 
         log_contrast :: Float. Parameter for the brightness.
 
-        figsize, xlabel, ylabel, title, grid and cmap are parameters 
+        figsize, xlabel, ylabel, title and grid are parameters 
         for the Matplotlib plot.
     """
     
@@ -171,10 +170,9 @@ def domain_coloring_illuminated(x, y, f,
 
     # initializing the colormap machinery
     norm = matplotlib.colors.Normalize(vmin=0,vmax=2*np.pi)
-    c_m = cmap #twilight, hsv
+    c_m = "hsv"
     s_m = matplotlib.cm.ScalarMappable(cmap=c_m, norm=norm)
     s_m.set_array([])
-    fcolors = s_m.to_rgba(arg_f)
     
     # a figure and a 3d subplot
     fig = plt.figure(figsize=figsize)
@@ -191,7 +189,7 @@ def domain_coloring_illuminated(x, y, f,
     
     if title is not None:
         ax.set_title(title, fontsize=18, pad=20, usetex=False)
-        
+    
     #ax.contourf(x, y, arg_f, cmap="hsv", levels=50, alpha=1)
     ax.imshow(img, extent=[-lim,lim,-lim,lim], interpolation="none", origin="upper")
    
@@ -299,7 +297,7 @@ def complex_plot3D(x, y, f,
     # Draw the colorbar 
     cbar = plt.colorbar(s_m, ticks=[0, np.pi/2, np.pi, 3*np.pi/2, 2*np.pi], pad=0.1)
     cbar.ax.set_yticklabels(["$0$", "$\\frac{\\pi}{2}$", "$\\pi$", "$\\frac{3\\pi}{2}$", "$2\\pi$"], fontsize=16)
-    
+    cbar.ax.set_ylabel("Arg f(z)", fontsize=16)
     plt.tight_layout()
     plt.show()
 
@@ -748,6 +746,11 @@ def complex_contour(x, y, f,
         cont_im = ax.contour(x, y, f.imag, levels=levels, linestyles=ls, linewidths=lw, colors="C0") #C3 = default blue
         if clabels == True:
             ax.clabel(cont_im, fontsize=9, inline=1)
+
+        # Add a legend to the contour plot.
+        le_re, _ = cont_re.legend_elements()
+        le_im, _ = cont_im.legend_elements()
+        ax.legend([le_re[0], le_im[0]], ["Re $f(z)$", "Im $f(z)$"], loc="best")
     
     # Plot the scatterpoints.
     if len(scatterpoints) != 0:
