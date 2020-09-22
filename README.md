@@ -9,8 +9,9 @@ Module for plotting complex-valued functions of complex variable using different
 
 ## Examples gallery
 
-### Examples 1 
+The code for generating the following examples can be found at [`examples.py`](examples.py).
 
+### Examples 1 
 
 In this first set of examples the test function is the following one:
 <p align="center">
