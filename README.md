@@ -75,3 +75,12 @@ Then, we could obtain the following plots:
 ![](cplotting-images/vector_cos.png) <br> `cplt.complex_vector_field(x, y, f, norm=False)`  |  ![](cplotting-images/vector_cmap_cos.png) <br> `cplt.complex_vector_field(x, y, f, cmap="hsv", norm=False)`
 | :-------------: | :-------------: |
 ![](cplotting-images/vector_normalized_cos.png) <br> **`cplt.complex_vector_field(x, y, f, norm=True)`** |  ![](cplotting-images/vector_cmap_normalized_cos.png) <br> **`cplt.complex_vector_field(x, y, f, cmap="hsv", norm=True)`**
+
+<br>
+
+---
+
+If you are a beginner with complex functions you might also find useful: ["Plotting Complex Variable Functions"](https://artmenlope.github.io/plotting-complex-variable-functions/).
+
+I would also like to recommend an online interactive book by Juan Carlos Ponce Campuzano called ["COMPLEX ANALYSIS - A Visual and Interactive Introduction"](https://complex-analysis.com/).
+
