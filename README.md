@@ -1,3 +1,6 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://github.com/artmenlope/complex-plotting-tools/blob/master/LICENSE.md)
+![Last Commit](https://img.shields.io/github/last-commit/artmenlope/complex-plotting-tools)
+
 # complex-plotting-tools
 Module for plotting complex-valued functions of complex variable using different methods.
 
