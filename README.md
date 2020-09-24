@@ -30,6 +30,8 @@ In this first set of examples the test function is the following one:
 We start defining the variables and parameters for these first examples:
 
 ```python
+import numpy as np
+
 N = 100
 lim = 3
 x, y = np.meshgrid(np.linspace(-lim,lim,N), 
